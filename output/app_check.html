@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs — App Check</title>
+  <style>
+    :root{font-family:Arial,sans-serif;color:#17324d;background:#f8f7f3}body{max-width:1100px;margin:0 auto;padding:42px 28px}h1{font-family:Georgia,serif;font-size:48px;margin:0 0 10px}h2{font-family:Georgia,serif;margin:0 0 8px;color:#17324d}.intro{color:#5f6d76;margin-bottom:42px}.check{background:white;border:1px solid #dbe3e8;margin:28px 0;padding:24px;box-shadow:0 8px 22px #17324d12}.check p{color:#5f6d76;line-height:1.6}.check img{display:block;max-width:100%;height:auto;border:1px solid #dbe3e8;margin-top:18px}.status{color:#286a9d;font-size:12px;font-weight:bold;letter-spacing:1.5px;text-transform:uppercase}@media(max-width:700px){body{padding:24px 14px}h1{font-size:36px}}
+  </style>
+</head>
+<body>
+  <p class="status">Campus Customs · Problem 11</p>
+  <h1>Site testing</h1>
+  <p class="intro">Screenshots captured from the running Vite frontend and FastAPI/PydanticAI backend. The tests below check real behavior rather than static markup.</p>
+
+  <section class="check">
+    <h2>1. Chat checks real inventory and price</h2>
+    <p>The live chat was asked for the Yale Dad T-Shirt price and size-level stock. The assistant returned the database price of $32 and the available quantities, and the chat displayed a clickable product match.</p>
+    <img src="app_check_images/01_chat_inventory_price.png" alt="Live chat showing Yale Dad T-Shirt price and inventory">
+  </section>
+
+  <section class="check">
+    <h2>2. Chat category search returns dynamic product cards</h2>
+    <p>The chat was opened and asked “Show me hoodies.” The assistant returned a category response and the frontend displayed dynamic product-match cards in the chat, each with product details and a link to the existing product detail route.</p>
+    <img src="app_check_images/02_chat_category_cards.png" alt="Chat category question returning dynamic hoodie product cards">
+  </section>
+
+  <section class="check">
+    <h2>3. Missing-product usability state</h2>
+    <p>A deliberately invalid product URL was opened. Instead of a blank or broken page, the app showed a clear not-found explanation and a path back to Products.</p>
+    <img src="app_check_images/03_missing_product_error.png" alt="Clear missing product error state">
+  </section>
+</body>
+</html>
